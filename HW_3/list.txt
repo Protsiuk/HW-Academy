@@ -1,1 +1,1 @@
-list_fruit[apples, pears, bananas, apricot, avocado]
+list_fruit[apples, pears, bananas, apricot, avocado, pineapple]
