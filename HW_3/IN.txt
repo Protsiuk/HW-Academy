@@ -1,0 +1,4 @@
+Hello, Pejple!
+Wrong word "Pejple"
+Right word "People"
+Hello, People!
