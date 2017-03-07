@@ -1,5 +1,8 @@
 # task 5.1.
 
+
+from hw_5_bonus import chek_str_int
+from random import randint
 input_data = dict(first_name="Alyssa", last_name="Beaver", email="walch_a@yahoo.com", age=34)
 
 
@@ -26,3 +29,13 @@ str_value = ','.join(list_clean)
 list_result = str_value.split(',')
 print(str_value)
 print(list_result)
+
+# Call function chek_str_int from hw_5_bonus
+
+print(chek_str_int(40))
+
+# Call function chek_str_int quentity of random number from modul random
+
+rand_number = randint(10, 20)
+for n in range(rand_number):
+    print(chek_str_int(40))
