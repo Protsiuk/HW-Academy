@@ -1,10 +1,10 @@
-# написать Hello World
+# write Hello World
 
 print("Hello, World")
 
-# написать Hello World -2017
+# write Hello World -2017
 
 a = 2017.98
 b = "Hello"
 c = "World"
-print(b+', '+c+'-'+str(int(a))+'!')
+print(b + ', ' + c + '-' + str(int(a)) + '!')
