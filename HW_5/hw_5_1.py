@@ -22,7 +22,6 @@ for x in list_clean:
             list_clean.remove(x)
 list_clean.sort(reverse=True)
 list_clean.append(str(a))
-print(list_clean)
 str_value = ','.join(list_clean)
 list_result = str_value.split(',')
 print(str_value)
