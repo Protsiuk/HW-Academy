@@ -1,19 +1,17 @@
 
 from selenium import webdriver
-# from selenium.webdriver.common.keys import Keys
+
 from selenium.common.exceptions import NoSuchElementException
 import os
 
 chromedriver = os.path.join(os.path.dirname(os.path.abspath(__file__)), "chromedriver")
 
-# enviroment variable "webdriver.chrome.driver"
 os.environ["webdriver.chrome.driver"] = chromedriver
 driver = webdriver.Chrome(chromedriver)
 
 driver.get("https://toster.ru/")
 questions = driver.find_elements_by_class_name("question_short")
-# print(questions)
-# print(len(questions))
+
 
 """
 
@@ -60,5 +58,6 @@ for question in questions:
 
 # size window
 driver.set_window_size(414, 736)
+
 
 driver.quit()
