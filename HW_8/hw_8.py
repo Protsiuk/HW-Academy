@@ -1,4 +1,4 @@
-# Homework 8_9
+# Homework 8_Bonus task_8&9
 
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
@@ -32,6 +32,7 @@ for element in questions:
     result.append([question, data_publish, followers, number_answers, correct_answer])
 
 # going to pages(from 1 up to 20)
+
 paginators = driver.find_elements_by_class_name("paginator__item-link")
 number_pages = 1
 while number_pages < 20:
@@ -43,9 +44,10 @@ while number_pages < 20:
 print("Was opened ", number_pages, "pages")
 
 # size window 414х736
+
 driver.set_window_size(414, 736)
 
-# add to CSV
+# add to CSV Toster parsing data
 
 with open('torser_parsing.csv', 'w', newline='') as csv_file:
     writer = csv.writer(csv_file)
@@ -53,12 +55,19 @@ with open('torser_parsing.csv', 'w', newline='') as csv_file:
     for element in result:
         writer.writerow(element)
 
-# bonus task
+# bonus task to HW8
 driver.get("https://habrahabr.ru")
 write_navbar = driver.find_element_by_class_name("btn_navbar_registration").click()
 email = driver.find_element_by_xpath("//input[@name='email']").send_keys("sirko@gmail.com")
 login = driver.find_element_by_xpath("//input[@name='login']").send_keys("sirko_sobaka")
 password = driver.find_element_by_xpath("//input[@name='password']").send_keys("poiuyt")
 password2 = driver.find_element_by_xpath("//input[@name='password2']").send_keys("poiuyt")
+
+# Bonus to HW9. Add to CSV "habrahabr" parsing data
+
+with open('habrahabr_parsing.csv', 'w', newline='') as csv_file:
+    writer = csv.writer(csv_file)
+    writer.writerow(["Email", "Login", "Password", "Repeat password"])
+    writer.writerow([email, login, password, password2])
 
 driver.quit()
